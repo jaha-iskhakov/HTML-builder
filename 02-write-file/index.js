@@ -7,7 +7,6 @@ const writer = new fs.WriteStream(path.join(__dirname, 'out.txt'), {encoding: 'u
 
 let rl = readline.createInterface({ input, output });
 
-// Создаем файл, и пишем контент
 rl.question('file out.txt was created, write content: \n if you want end, write "exit"', (answer) => {
   if (answer === 'exit') {
     rl.close();
@@ -16,7 +15,6 @@ rl.question('file out.txt was created, write content: \n if you want end, write 
   }
 });
 
-// всё пишем в файл, проверяя не написано ли слово "exit".
 rl.on('line', (input) => {
   if (input === 'exit') {
     rl.close();

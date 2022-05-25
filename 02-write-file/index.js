@@ -17,6 +17,7 @@ rl.question('file out.txt was created, write content: \n if you want end, write 
 
 rl.on('line', (input) => {
   if (input === 'exit') {
+    console.log('file out.txt was cloused, see you');
     rl.close();
   } else {
     writer.write(input + '\n');
